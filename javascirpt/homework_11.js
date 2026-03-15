@@ -11,7 +11,7 @@ const bankAccount = {
   deposit: function () {
     let dipos = Number(prompt("combien voulez vous mettre sur le compte"));
     if (dipos === 0) {
-      console.log("imposibily transaction");
+      return "imposibily transaction";
     } else {
       alert(`vous avez ajouté ${dipos} à ${this.balance}`);
     }
@@ -20,15 +20,15 @@ const bankAccount = {
   withdraw: function () {
     let withd = Number(prompt("combien voulez vous retirer du compte"));
     if (withd === 0) {
-      console.log("imposibily transaction");
+      return "imposibily transaction";
     } else {
       alert(`vous avez retirer ${withd} de ${this.balance}`);
     }
     return this.balance - withd;
   },
 };
-// console.log(bankAccount.deposit())
-// console.log(bankAccount.withdraw())
+console.log(bankAccount.deposit())
+console.log(bankAccount.withdraw())
 
 // 2 Створіть об'єкт "weather" з властивостями "temperature", "humidity", "windSpeed". Додайте
 // до об'єкту метод, який повертає "true", якщо температура нижче 0 градусів Цельсія, та "false",
@@ -40,17 +40,18 @@ const weather = {
     let degred = Number(prompt("quelle degré avez-vous?"));
     if (degred < 0) {
       alert("температура нижче 0 градусів Цельсія");
-      console.log(true);
+      return true;
     } else {
       alert("температура + 0 градусів Цельсія");
-      console.log(false);
+      return false;
     }
     return degred;
   },
   humidity: 100,
   windSpeed: 40,
 };
-// console.log(weather.temperature())
+
+console.log(weather.temperature())
 // 3 Створіть об’єкт "user", який буде мати властивості "name", "email", "password". Додайте метод
 // "login", який буде перевіряти правильність введеного email та password.
 
@@ -80,9 +81,9 @@ const animes = {
   rating:10,
   aprouveur:function(){
     if (this.rating>8) {
-      console.log(true)
+      return true
     } else {
-      console.log(false);
+      return false;
     }
     return this.rating
   }
