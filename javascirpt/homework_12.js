@@ -11,7 +11,8 @@ const user={
 }
  const keys =Object.keys(user)
  for (const key of keys) {
-    console.log(user.myPasion,"skydiving");
+    user.key=value
+    // console.log(user.myPasion,"skydiving");
  }
 // Завдання 2
 // Напиши функцію countProps(obj), яка рахує кількість
