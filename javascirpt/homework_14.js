@@ -172,7 +172,7 @@ console.log(getUserNames(users));
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 
 const getUsersWithEyeColor = (users, color) => {
-  return users.map((user) => user.eyeColor);
+  return users.filter((user) => user.eyeColor === color);
 };
 
 console.log(getUsersWithEyeColor(users, "blue")); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
@@ -182,7 +182,7 @@ console.log(getUsersWithEyeColor(users, "blue")); // [об'єкт Moore Hensley,
 // Отримати масив імен користувачів за статтю (поле gender)
 
 const getUsersWithGender = (users, gender) => {
-  return users.map((user) => (user.gender === gender ? user.name : undefined));
+  return users.filter((user) => user.gender === gender);
 };
 
 console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
@@ -192,7 +192,7 @@ console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazq
 // Отримати масив тільки неактивних користувачів (поле isActive).
 
 const getInactiveUsers = (users) => {
-  return users.map((user) => (user.isActive !== true ? user.name : undefined));
+  return users.filter((user) => user.isActive !== true);
 };
 
 console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
